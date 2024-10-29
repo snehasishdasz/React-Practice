@@ -13,7 +13,7 @@ function App() {
   return (
     <>
     <h1 className='bg-green-400 p-4 text-black rounded-l mb-4'>Tailwind Test</h1>
-    <Card  username="Bikash" btnText="ClickME"/>
+    <Card  username="Bikash" btnText="ClickME" newObj={myObj}/>
     <Card username="Dillip" btnText="VisitME"/>
 
     </>
