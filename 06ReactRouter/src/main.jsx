@@ -12,6 +12,8 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import User from './components/User/User';
+import Github, { githubUserInfoLoader } from './components/Github/Github';
+import Bikash from './components/Bikash/Bikash';
 
 // const router = createBrowserRouter([
 //   {
@@ -38,9 +40,18 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route path='' element={<Home/>}/>
-      <Route path='about' element={<About/>}/>
+      <Route path='about' element={<About/>}>
+          <Route path='bikash' element={<Bikash/>} />
+      </Route>
       <Route path='contact' element={<Contact/>}/>
       <Route path='user/:userid' element={<User/>}/>
+      <Route 
+      loader={githubUserInfoLoader}
+      path='github' 
+      element={<Github/>}
+
+      />
+
     </Route>
   )
 )

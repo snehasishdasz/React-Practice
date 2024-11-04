@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 
 
  function About() {
@@ -27,6 +28,7 @@
                     </div>
                 </div>
             </div>
+            <Outlet /> {/* Add this line for nested routes */}
         </div>
     );
 }
