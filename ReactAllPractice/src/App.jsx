@@ -20,11 +20,13 @@ function App() {
 
   return (
     <div className="container mx-auto">
+    {isLoading ? <h1 className="text-6xl text-center ">Loading....</h1> :
       <div className="grid grid-cols-4 gap-3">
         {images.map((image) => (
           <Card key={image.id} image={image} />  // Added return statement here
         ))}
       </div>
+    }
     </div>
   );
 }
