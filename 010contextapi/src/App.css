@@ -1,0 +1,26 @@
+/* App.css */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+/* Add this in App.css or create a separate CSS file */
+.totalcart {
+  background-color: antiquewhite;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.totalcart .cart {
+  max-width: 350px;
+  width: 100%;
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}

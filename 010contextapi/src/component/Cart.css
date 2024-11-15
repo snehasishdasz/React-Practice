@@ -1,0 +1,27 @@
+/* Cart.css */
+.cart {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-top: 20px;
+    max-width: 300px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cart li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .cart h5 {
+    font-size: 18px;
+    color: #000;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
