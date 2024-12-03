@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 
-function Card({username,btnText="VisitME"}) {
+function Card({username,btnText="VisitME",newObj}) {
     // console.log(props)
     // eslint-disable-next-line react/prop-types
     console.log(username)
