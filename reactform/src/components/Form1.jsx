@@ -32,17 +32,17 @@ const Form1 = () => {
                     lineHeight: "1.6",
                 }}
             >
-                My name is:{" "}, 
+                My name is:{" "}
                 <span style={{ color: "#007bff", fontWeight: "bold" }}>
-                    {user.firstName} {user.lastName}
+                    {user.firstName} {user.lastName} {" "},
                 </span>{" "}
-                My Phone number is:{" "}, 
+                My Phone number is:{" "}
                 <span style={{ color: "#007bff", fontWeight: "bold" }}>
-                    {user.phoneNumber}
+                    {user.phoneNumber} {" "},
                 </span>{" "}
-                My email is:{" "}, 
+                My email is:{" "}
                 <span style={{ color: "#007bff", fontWeight: "bold" }}>
-                    {user.email}
+                    {user.email} {" "},
                 </span>
             </h3>
 
