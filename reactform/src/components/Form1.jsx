@@ -1,25 +1,27 @@
 import React, { useState } from "react";
-import "./Form1.css"
+import "./Form1.css";
 
 const Form1 = () => {
-    const [user,setUser] = useState({
-        firstName:"",
-        lastName:"",
-        email:"",
-        password:"",
-        phoneNumber:"",
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        phoneNumber: "",
     });
 
-    const handleInput=(e)=>{
-        const{name,value} = e.target;
+    const [showPassword, setShowPassword] = useState(false);
 
-        setUser((prev)=>({...prev,[name]:value}))
-    }
+    const handleInput = (e) => {
+        const { name, value } = e.target;
+        setUser((prev) => ({ ...prev, [name]: value }));
+    };
 
-    const handleFormSubmit=(e)=>{
+    const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log(user)
-    }
+        console.log(user);
+    };
+
     return (
         <>
             <h3
@@ -46,7 +48,6 @@ const Form1 = () => {
                 </span>
             </h3>
 
-
             <div className="form-container">
                 <h2>Registration Form</h2>
                 <form onSubmit={handleFormSubmit}>
@@ -64,7 +65,31 @@ const Form1 = () => {
                     </div>
                     <div className="form-group">
                         <label>Password:</label>
-                        <input type="password" name="password" value={user.password} required onChange={handleInput} />
+                        <div style={{ position: "relative" }}>
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password"
+                                value={user.password}
+                                required
+                                onChange={handleInput}
+                                style={{ paddingRight: "30px" }}
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                style={{
+                                    position: "absolute",
+                                    right: "5px",
+                                    top: "50%",
+                                    transform: "translateY(-50%)",
+                                    background: "none",
+                                    border: "none",
+                                    cursor: "pointer",
+                                }}
+                            >
+                                {showPassword ? "👁️" : "🙈"}
+                            </button>
+                        </div>
                     </div>
                     <div className="form-group">
                         <label>Phone Number:</label>
@@ -75,7 +100,6 @@ const Form1 = () => {
                     </button>
                 </form>
             </div>
-            
         </>
     );
 };
